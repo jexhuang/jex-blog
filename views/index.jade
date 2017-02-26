@@ -1,5 +1,142 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // Navigation
+  nav.navbar.navbar-default.navbar-fixed-top.topnav(role='navigation')
+    .container.topnav
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand.topnav(href='#') Jex's Life
+      // Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#about') About
+          li
+            a(href='#services') Services
+          li
+            a(href='#contact') Contact
+      // /.navbar-collapse
+    // /.container
+  // Header
+  a(name='about')
+  .intro-header
+    .container
+      .row
+        .col-lg-12
+          .intro-message
+            h1 This is Jex's Life
+            h3 Welcome and Check it out!
+            hr.intro-divider
+            ul.list-inline.intro-social-buttons
+              li
+                a.btn.btn-default.btn-lg(href='https://www.facebook.com/jexhuang1991')
+                  i.fa.fa-facebook.fa-fw
+                  span.network-name Facebook
+              li
+                a.btn.btn-default.btn-lg(href='https://github.com/jexhuang')
+                  i.fa.fa-github.fa-fw
+                  span.network-name Github
+              li
+                a.btn.btn-default.btn-lg(href='https://www.linkedin.com/in/jexhuang/')
+                  i.fa.fa-linkedin.fa-fw
+                  span.network-name Linkedin
+    // /.container
+  // /.intro-header
+  // Page Content
+  a(name='services')
+  .content-section-a
+    .container
+      .row
+        .col-lg-5.col-sm-6
+          hr.section-heading-spacer
+          .clearfix
+          h2.section-heading
+            | Java Programer
+          p.lead
+             | I am Jex Huang,
+             currently working for about two years
+             all with Java as the main development language
+             also develop in front-end JavaScript, css, html
+        .col-lg-5.col-lg-offset-2.col-sm-6
+          img.img-responsive(src='/images/ipad.png', alt='')
+    // /.container
+  // /.content-section-a
+  .content-section-b
+    .container
+      .row
+        .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+          hr.section-heading-spacer
+          .clearfix
+          h2.section-heading
+            | Keep Learning...
+          p.lead
+            | Build a blog with nodejs and vuejs
+            | ,imporve others skill likes CI/CD tool,Nginx ,
+            | AWS,No SQL DB,Functional programing,Muliti thread programing
+        .col-lg-5.col-sm-pull-6.col-sm-6
+          img.img-responsive(src='/images/dog.png', alt='')
+    // /.container
+  // /.content-section-b
+  .content-section-a
+    .container
+      .row
+        .col-lg-5.col-sm-6
+          hr.section-heading-spacer
+          .clearfix
+          h2.section-heading
+            | Contact me with email
+          p.lead
+            | m3m0080@gmail.com
+        .col-lg-5.col-lg-offset-2.col-sm-6
+          img.img-responsive(src='/images/phones.png', alt='')
+    // /.container
+  // /.content-section-a
+  a(name='contact')
+  .banner
+    .container
+      .row
+        .col-lg-6
+          h2 Connect to Jex Huang:
+        .col-lg-6
+          ul.list-inline.banner-social-buttons
+            li
+              a.btn.btn-default.btn-lg(href='https://www.facebook.com/jexhuang1991')
+                i.fa.fa-facebook.fa-fw
+                span.network-name Facebook
+            li
+              a.btn.btn-default.btn-lg(href='https://github.com/jexhuang')
+                i.fa.fa-github.fa-fw
+                span.network-name Github
+            li
+              a.btn.btn-default.btn-lg(href='https://www.linkedin.com/in/jexhuang/')
+                i.fa.fa-linkedin.fa-fw
+                span.network-name Linkedin
+    // /.container
+  // /.banner
+  // Footer
+  footer
+    .container
+      .row
+        .col-lg-12
+          ul.list-inline
+            li
+              a(href='#') Home
+            li.footer-menu-divider ⋅
+            li
+              a(href='#about') About
+            li.footer-menu-divider ⋅
+            li
+              a(href='#services') Services
+            li.footer-menu-divider ⋅
+            li
+              a(href='#contact') Contact
+          p.copyright.text-muted.small Copyright © Your Company 2017. All Rights Reserved
+  // Bootstrap Core JavaScript
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/bootstrap.min.js')
